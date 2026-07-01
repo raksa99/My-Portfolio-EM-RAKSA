@@ -68,6 +68,15 @@ const projects: Project[] = [
     link: 'https://room-rent-teal.vercel.app'
   },
   {
+    id: 9,
+    title: 'Neon Jump: 2D Platformer Game',
+    category: 'Dev',
+    description: 'A dynamic 2D neon-themed action platformer game built with Python and Pygame, featuring physics-based movements, custom collision mechanics, levels, and zombie enemy waves.',
+    image: 'https://images.unsplash.com/photo-1551103782-8ab07afd45c1?auto=format&fit=crop&w=800&q=80',
+    tags: ['Python', 'Pygame', 'OOP', 'Game Physics'],
+    link: 'https://github.com/raksa99/Python_game.git'
+  },
+  {
     id: 5,
     title: 'Misty Landscapes: Angkor Glow',
     category: 'Photo',
