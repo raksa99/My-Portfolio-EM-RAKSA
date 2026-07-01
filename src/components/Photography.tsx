@@ -24,27 +24,33 @@ const photos: PhotoItem[] = [
   },
   {
     id: 3,
-    title: 'Rainforest Dew',
-    location: 'Cardamom Mountains',
-    image: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=800&q=80',
+    title: 'Symmetry of Cables',
+    location: 'Tsubasa Bridge, Neak Loeung',
+    image: '/images/photo-bridge.jpg',
   },
   {
     id: 4,
-    title: 'Architectural Shadows',
-    location: 'Vance Residence',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+    title: 'Mythical Garuda Statue',
+    location: 'Phnom Penh, Cambodia',
+    image: '/images/photo-garuda.jpg',
   },
   {
     id: 5,
-    title: 'Urban Commute',
-    location: 'Phnom Penh Center',
-    image: 'https://images.unsplash.com/photo-1540959733332-eab4deceeaf7?auto=format&fit=crop&w=800&q=80',
+    title: 'Serene Seated Buddha',
+    location: 'Bokor Mountain, Kampot',
+    image: '/images/photo-buddha.jpg',
   },
   {
     id: 6,
-    title: 'Quiet Workspace Lights',
-    location: 'Studio Loft',
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80',
+    title: 'Urban Portraiture',
+    location: 'Phnom Penh, Cambodia',
+    image: '/images/photo-portrait.jpg',
+  },
+  {
+    id: 7,
+    title: 'Commercial Footwear Shoot',
+    location: 'Studio Production',
+    image: '/images/photo-product.jpg',
   }
 ];
 
