@@ -18,7 +18,7 @@ const projects: Project[] = [
     title: 'Visual Storytelling: PP Streets',
     category: 'Photo',
     description: 'A deep photographic dive into the street light dynamics and urban composition of Phnom Penh at night.',
-    image: '/images/phnom_penh_night.png',
+    image: '/images/phnom_penh_night.jpg',
     tags: ['Photography', 'Lightroom', 'Long Exposure'],
     link: '#'
   },

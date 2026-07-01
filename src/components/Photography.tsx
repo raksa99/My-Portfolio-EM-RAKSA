@@ -20,7 +20,7 @@ const photos: PhotoItem[] = [
     id: 2,
     title: 'Metropolis Light Trails',
     location: 'Sothearos Blvd, Phnom Penh',
-    image: '/images/phnom_penh_night.png',
+    image: '/images/phnom_penh_night.jpg',
   },
   {
     id: 3,
