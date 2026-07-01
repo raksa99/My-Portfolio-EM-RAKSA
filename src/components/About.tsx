@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BookOpen, User, MapPin, Heart, Award, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { BookOpen, User, MapPin, Heart, Award, X, ChevronLeft, ChevronRight, FileText } from 'lucide-react';
 
 const row1Items = [
   'C++', 'C#', 'Java', 'HTML', 'CSS', 'JavaScript', 
@@ -112,6 +112,19 @@ export default function About() {
                     <Heart className="h-4.5 w-4.5 text-primary-500 flex-shrink-0" />
                     <span>Visual arts & clean code</span>
                   </div>
+                </div>
+
+                {/* CV Action Button */}
+                <div className="mt-6 pt-6 border-t border-slate-200/50 dark:border-slate-800/50">
+                  <a
+                    href="/cv.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-full px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 active:bg-primary-800 shadow-md shadow-primary-500/10 hover:shadow-lg transition-all duration-300 group"
+                  >
+                    <FileText className="mr-2 h-4 w-4" />
+                    <span>View CV / Resume</span>
+                  </a>
                 </div>
               </div>
             </div>

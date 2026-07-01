@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Mail } from 'lucide-react';
+import { ArrowRight, Mail, FileText } from 'lucide-react';
 
 const roles = ['Developer', 'Photographer', 'Designer'];
 
@@ -80,7 +80,7 @@ export default function Hero() {
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4">
               <button
                 onClick={() => handleScrollTo('portfolio')}
                 className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-base font-semibold text-white bg-primary-600 hover:bg-primary-700 active:bg-primary-800 shadow-lg shadow-primary-500/25 dark:shadow-none hover:shadow-xl hover:shadow-primary-500/30 transition-all duration-300 group"
@@ -88,6 +88,16 @@ export default function Hero() {
                 <span>View My Work</span>
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
+
+              <a
+                href="/cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-base font-semibold text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800/80 border border-slate-200 dark:border-slate-800 shadow-md transition-all duration-300 group"
+              >
+                <FileText className="mr-2 h-5 w-5 text-primary-500 group-hover:text-primary-600 transition-colors" />
+                <span>View CV</span>
+              </a>
 
               <button
                 onClick={() => handleScrollTo('contact')}
