@@ -51,11 +51,11 @@ const projects: Project[] = [
   },
   {
     id: 7,
-    title: 'Voleak Express: Bus Booking System',
+    title: 'Voleak Express: Truck Shipping System',
     category: 'Dev',
-    description: 'A comprehensive bus booking mobile and web system built with Flutter and Supabase, supporting seat booking, live GPS tracking, conductor ticketing, and admin analytics dashboards.',
-    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80',
-    tags: ['Flutter', 'Dart', 'Supabase', 'Realtime', 'Maps'],
+    description: 'A comprehensive cargo logistics and truck shipping system built with Flutter and Supabase, supporting shipment tracking, driver dispatching, route optimization, and admin analytics dashboards.',
+    image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=800&q=80',
+    tags: ['Flutter', 'Dart', 'Supabase', 'Realtime', 'Logistics'],
     link: 'https://voleak-express.vercel.app'
   },
   {
