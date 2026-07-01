@@ -268,7 +268,7 @@ export default function About() {
             </div>
 
             {/* Certificate Image */}
-            <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-white">
+            <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-white flex items-center justify-center" style={{ aspectRatio: '4/3' }}>
               <AnimatePresence mode="wait">
                 <motion.img
                   key={certIndex}
@@ -278,7 +278,7 @@ export default function About() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -30 }}
                   transition={{ duration: 0.3 }}
-                  className="w-full h-auto max-h-[75vh] object-contain"
+                  className="h-[133%] w-auto object-contain -rotate-90"
                 />
               </AnimatePresence>
             </div>
