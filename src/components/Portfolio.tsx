@@ -77,6 +77,15 @@ const projects: Project[] = [
     link: 'https://github.com/raksa99/Python_game.git'
   },
   {
+    id: 10,
+    title: 'Interactive Birthday Celebration Web',
+    category: 'Dev',
+    description: 'A creative, interactive web application built with Angular to celebrate birthdays, featuring custom particle effects, canvas confetti animations, and responsive layouts.',
+    image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80',
+    tags: ['Angular', 'TypeScript', 'Tailwind', 'Vercel'],
+    link: 'https://my-birthday-em-raksa.vercel.app'
+  },
+  {
     id: 5,
     title: 'Misty Landscapes: Angkor Glow',
     category: 'Photo',
