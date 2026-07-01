@@ -74,9 +74,13 @@ export default function About() {
               <div className="relative glass-card rounded-2xl p-8 border border-slate-200/50 dark:border-slate-800/50 overflow-hidden">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-primary-500/10 to-pink-500/10 rounded-full -mr-8 -mt-8" />
                 
-                {/* Simulated profile icon/graphic */}
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-primary-500 to-pink-500 flex items-center justify-center text-white mb-6 shadow-md shadow-primary-500/10">
-                  <User className="h-10 w-10" />
+                {/* Profile Photo */}
+                <div className="w-28 h-28 rounded-2xl bg-gradient-to-tr from-primary-500 to-pink-500 p-[3px] mb-6 shadow-lg shadow-primary-500/20">
+                  <img 
+                    src="/images/profile.jpg" 
+                    alt="Em Raksa" 
+                    className="w-full h-full rounded-[13px] object-cover object-top"
+                  />
                 </div>
                 
                 <h3 className="font-display text-2xl font-bold text-slate-900 dark:text-white mb-1">

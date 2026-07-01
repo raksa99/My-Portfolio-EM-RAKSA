@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Mail } from 'lucide-react';
-import ThreeHero from './ThreeHero';
 
 const roles = ['Developer', 'Photographer', 'Designer'];
 
@@ -100,14 +99,41 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Hero Right 3D Visualizer */}
+          {/* Hero Right: Profile Photo */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.1 }}
-            className="lg:col-span-5 h-[350px] sm:h-[450px] lg:h-[500px] flex items-center justify-center pointer-events-auto"
+            className="lg:col-span-5 flex items-center justify-center"
           >
-            <ThreeHero />
+            <div className="relative">
+              {/* Decorative floating blobs */}
+              <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-primary-400/30 to-pink-400/30 rounded-full blur-2xl animate-pulse" />
+              <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-gradient-to-tr from-pink-400/20 to-primary-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+              
+              {/* Gradient ring border */}
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-tr from-primary-500 via-pink-500 to-primary-500 p-[4px] shadow-2xl shadow-primary-500/20 dark:shadow-primary-500/10">
+                <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-slate-900">
+                  <img 
+                    src="/images/profile.jpg" 
+                    alt="Em Raksa - Developer, Photographer, Designer" 
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+              </div>
+
+              {/* Floating badge */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.5 }}
+                className="absolute -bottom-3 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full glass-card border border-slate-200/50 dark:border-slate-800/50 shadow-lg"
+              >
+                <span className="text-sm font-semibold text-slate-700 dark:text-slate-200">
+                  📍 Phnom Penh, Cambodia
+                </span>
+              </motion.div>
+            </div>
           </motion.div>
 
         </div>
