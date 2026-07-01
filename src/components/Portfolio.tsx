@@ -14,15 +14,6 @@ interface Project {
 
 const projects: Project[] = [
   {
-    id: 1,
-    title: 'Setec Management System',
-    category: 'Dev',
-    description: 'An interactive student & class coordination dashboard with schedule tracking, customized for Setec Institute.',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
-    tags: ['React', 'TypeScript', 'Tailwind', 'Node.js'],
-    link: '#'
-  },
-  {
     id: 2,
     title: 'Visual Storytelling: PP Streets',
     category: 'Photo',
