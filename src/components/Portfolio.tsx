@@ -42,12 +42,12 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    title: 'Custom E-Commerce Platform',
+    title: 'Skin Care E-Commerce Store',
     category: 'Dev',
-    description: 'A lightning-fast frontend storefront displaying items in glassmorphic cards with complex cart management.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-    tags: ['Vite', 'React', 'Context API', 'Tailwind'],
-    link: '#'
+    description: 'A premium, responsive skin care storefront and e-commerce catalog featuring dynamic product filtering, intuitive category navigation, and modern layouts.',
+    image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80',
+    tags: ['Angular', 'TypeScript', 'CSS', 'Vercel'],
+    link: 'https://skin-care-e-commerce.vercel.app'
   },
   {
     id: 5,
