@@ -14,7 +14,7 @@ const photos: PhotoItem[] = [
     id: 1,
     title: 'Golden Hour Reflection',
     location: 'Angkor Wat, Siem Reap',
-    image: '/images/angkor_wat_sunrise.png',
+    image: '/images/angkor_wat_sunrise.jpg',
   },
   {
     id: 2,

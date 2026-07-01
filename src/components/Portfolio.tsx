@@ -81,7 +81,7 @@ const projects: Project[] = [
     title: 'Misty Landscapes: Angkor Glow',
     category: 'Photo',
     description: 'Capturing the golden sunrise reflecting in the historic lotus ponds of Angkor Wat under light mist.',
-    image: '/images/angkor_wat_sunrise.png',
+    image: '/images/angkor_wat_sunrise.jpg',
     tags: ['Landscape', 'Angkor Wat', 'Morning Light'],
     link: '#'
   },
