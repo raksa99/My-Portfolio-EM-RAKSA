@@ -54,7 +54,7 @@ export default function Footer() {
           {/* Socials */}
           <div className="flex space-x-4">
             <a
-              href="https://github.com"
+              href="https://github.com/raksa99"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-xl bg-slate-200/40 dark:bg-slate-900 hover:bg-primary-500/10 hover:text-primary-600 dark:hover:text-primary-400 text-slate-600 dark:text-slate-400 transition-colors"
@@ -79,7 +79,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/e.raksa77"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-xl bg-slate-200/40 dark:bg-slate-900 hover:bg-primary-500/10 hover:text-primary-600 dark:hover:text-primary-400 text-slate-600 dark:text-slate-400 transition-colors"
@@ -92,7 +92,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://facebook.com"
+              href="https://facebook.com/raksa77"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-xl bg-slate-200/40 dark:bg-slate-900 hover:bg-primary-500/10 hover:text-primary-600 dark:hover:text-primary-400 text-slate-600 dark:text-slate-400 transition-colors"
@@ -103,7 +103,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://tiktok.com"
+              href="https://tiktok.com/@e.raksa77"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-xl bg-slate-200/40 dark:bg-slate-900 hover:bg-primary-500/10 hover:text-primary-600 dark:hover:text-primary-400 text-slate-600 dark:text-slate-400 transition-colors"
@@ -114,7 +114,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://t.me/raksa"
+              href="https://t.me/emraksa77"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-xl bg-slate-200/40 dark:bg-slate-900 hover:bg-primary-500/10 hover:text-primary-600 dark:hover:text-primary-400 text-slate-600 dark:text-slate-400 transition-colors"
