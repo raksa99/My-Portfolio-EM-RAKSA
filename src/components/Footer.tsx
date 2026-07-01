@@ -66,7 +66,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/em-raksa-17016741b"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-xl bg-slate-200/40 dark:bg-slate-900 hover:bg-primary-500/10 hover:text-primary-600 dark:hover:text-primary-400 text-slate-600 dark:text-slate-400 transition-colors"
