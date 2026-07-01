@@ -51,6 +51,18 @@ const photos: PhotoItem[] = [
     title: 'Commercial Footwear Shoot',
     location: 'Studio Production',
     image: '/images/photo-product.jpg',
+  },
+  {
+    id: 8,
+    title: 'Majestic Peacock Bloom',
+    location: 'Wildlife Sanctuary, Cambodia',
+    image: '/images/photo-peacock.jpg',
+  },
+  {
+    id: 9,
+    title: 'Khmer Traditional Dance',
+    location: 'Siem Reap, Cambodia',
+    image: '/images/photo-festival.jpg',
   }
 ];
 
