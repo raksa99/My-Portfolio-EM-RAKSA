@@ -33,12 +33,12 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: 'Raksa Coffee POS Design',
-    category: 'Design',
-    description: 'A high-fidelity Figma prototype and comprehensive design system for a coffee shop POS terminal.',
+    title: 'Raksa Coffee POS System',
+    category: 'Dev',
+    description: 'A fully functional Flutter POS web application and design system for a coffee shop, built with Bloc, Hive, and Supabase.',
     image: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80',
-    tags: ['UI/UX', 'Figma', 'Prototyping', 'Design System'],
-    link: '#'
+    tags: ['Flutter', 'Dart', 'Bloc', 'Supabase', 'Hive', 'UI/UX'],
+    link: 'https://raksa-coffee.vercel.app'
   },
   {
     id: 4,
