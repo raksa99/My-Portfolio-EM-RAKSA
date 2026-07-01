@@ -120,6 +120,15 @@ const projects: Project[] = [
     image: '/images/design-food-discount.jpg',
     tags: ['Photoshop', 'Marketing Design', 'Poster Design'],
     link: '#'
+  },
+  {
+    id: 14,
+    title: '3D Residential House Model',
+    category: 'Design',
+    description: 'A detailed 3D architectural house model designed using Trimble SketchUp, showcasing interior spatial layout, exterior siding, gating, and landscaping.',
+    image: '/images/design-sketchup-house.png',
+    tags: ['SketchUp', '3D Modeling', 'Architecture', 'Design'],
+    link: '#'
   }
 ];
 
