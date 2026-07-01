@@ -87,11 +87,38 @@ const projects: Project[] = [
   },
   {
     id: 6,
-    title: 'Minimal Portfolio Brand System',
+    title: 'Apsara Coffee Advertisement',
     category: 'Design',
-    description: 'Personal branding styling sheets, customized typography scale, and dark mode interface guidelines.',
-    image: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80',
-    tags: ['Branding', 'Typography', 'Visual Identity'],
+    description: 'A premium product advertisement poster designed using Adobe Photoshop and Illustrator, emphasizing lighting, depth, and traditional Khmer details.',
+    image: '/images/design-coffee-adv.jpg',
+    tags: ['Photoshop', 'Illustrator', 'Advertising', 'Graphic Design'],
+    link: '#'
+  },
+  {
+    id: 11,
+    title: 'Delicious Food Menu Board',
+    category: 'Design',
+    description: 'A clean, modern cafe menu board design utilizing vector layouts, structured pricing grids, and custom illustrations.',
+    image: '/images/design-food-menu.jpg',
+    tags: ['Illustrator', 'Photoshop', 'Typography', 'Menu Design'],
+    link: '#'
+  },
+  {
+    id: 12,
+    title: 'Khmer New Year Blessing Poster',
+    category: 'Design',
+    description: 'An elegant, high-fidelity formal greeting and blessing poster featuring intricate traditional Khmer borders, gold foil textures, and custom typography.',
+    image: '/images/design-khmer-greeting.jpg',
+    tags: ['Photoshop', 'Illustrator', 'Khmer Art', 'Print Design'],
+    link: '#'
+  },
+  {
+    id: 13,
+    title: 'Special Discount Food Poster',
+    category: 'Design',
+    description: 'A vibrant marketing poster created for food promotion campaigns, using bright sunburst backgrounds and dynamic discount tags to catch attention.',
+    image: '/images/design-food-discount.jpg',
+    tags: ['Photoshop', 'Marketing Design', 'Poster Design'],
     link: '#'
   }
 ];
