@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ZoomIn, X } from 'lucide-react';
 
 interface Project {
   id: number;
@@ -169,12 +169,14 @@ function TiltCard({ children, className }: { children: React.ReactNode; classNam
 
 export default function Portfolio() {
   const [filter, setFilter] = useState<'All' | 'Dev' | 'Photo' | 'Design'>('All');
+  const [activeProject, setActiveProject] = useState<Project | null>(null);
 
   const filteredProjects = projects.filter(
     (project) => filter === 'All' || project.category === filter
   );
 
   return (
+    <>
     <section id="portfolio" className="py-24 bg-white dark:bg-slate-950 relative overflow-hidden">
       <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-primary-500/5 dark:bg-primary-500/5 rounded-full blur-[100px] pointer-events-none" />
 
@@ -244,13 +246,24 @@ export default function Portfolio() {
                         />
                         {/* Overlay link icon */}
                         <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-3">
-                          <a
-                            href={project.link}
-                            className="p-3 rounded-full bg-white text-slate-900 hover:bg-primary-500 hover:text-white transition-colors shadow-md"
-                            aria-label="View Project"
+                          <button
+                            onClick={() => setActiveProject(project)}
+                            className="p-3 rounded-full bg-white text-slate-900 hover:bg-primary-500 hover:text-white transition-colors shadow-md focus:outline-none"
+                            aria-label="Zoom Photo"
                           >
-                            <ExternalLink className="h-5 w-5" />
-                          </a>
+                            <ZoomIn className="h-5 w-5" />
+                          </button>
+                          {project.link && project.link !== '#' && (
+                            <a
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="p-3 rounded-full bg-white text-slate-900 hover:bg-primary-500 hover:text-white transition-colors shadow-md"
+                              aria-label="View Project"
+                            >
+                              <ExternalLink className="h-5 w-5" />
+                            </a>
+                          )}
                         </div>
                       </div>
 
@@ -288,5 +301,69 @@ export default function Portfolio() {
 
       </div>
     </section>
+
+    {/* Full Screen Image Preview Modal */}
+    <AnimatePresence>
+      {activeProject && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.25 }}
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 backdrop-blur-sm p-4"
+          onClick={() => setActiveProject(null)}
+        >
+          <motion.div
+            initial={{ scale: 0.85, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.85, opacity: 0 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+            className="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setActiveProject(null)}
+              className="absolute -top-3 -right-3 z-10 p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors backdrop-blur-md border border-white/10"
+            >
+              <X className="h-5 w-5" />
+            </button>
+
+            {/* Label / Title overlay */}
+            <div className="mb-4 text-center px-6 py-2 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 max-w-[90%]">
+              <h4 className="text-base font-bold text-white leading-tight">
+                {activeProject.title}
+              </h4>
+              <p className="text-xs text-white/70 mt-1">
+                Category: {activeProject.category} • {activeProject.tags.join(', ')}
+              </p>
+            </div>
+
+            {/* Full Image */}
+            <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-slate-900/40 border border-white/10 flex items-center justify-center">
+              <img
+                src={activeProject.image}
+                alt={activeProject.title}
+                className="w-full h-auto max-h-[70vh] object-contain rounded-2xl"
+              />
+            </div>
+
+            {/* Action buttons in modal */}
+            {activeProject.link && activeProject.link !== '#' && (
+              <a
+                href={activeProject.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold shadow-lg shadow-primary-500/25 transition-all duration-300"
+              >
+                <span>Visit Live Project</span>
+                <ExternalLink className="h-4.5 w-4.5" />
+              </a>
+            )}
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+    </>
   );
 }
