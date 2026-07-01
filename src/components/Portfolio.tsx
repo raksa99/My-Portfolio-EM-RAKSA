@@ -59,6 +59,15 @@ const projects: Project[] = [
     link: 'https://voleak-express.vercel.app'
   },
   {
+    id: 8,
+    title: 'Room Rental & Booking System',
+    category: 'Dev',
+    description: 'A full-stack rental platform built with Angular and Express, featuring room listings, interactive availability check, booking management, and MongoDB integration.',
+    image: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80',
+    tags: ['Angular', 'Express', 'Node.js', 'MongoDB', 'Tailwind'],
+    link: 'https://room-rent-teal.vercel.app'
+  },
+  {
     id: 5,
     title: 'Misty Landscapes: Angkor Glow',
     category: 'Photo',
