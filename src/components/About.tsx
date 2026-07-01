@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion';
-import { BookOpen, User, MapPin, Heart } from 'lucide-react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { BookOpen, User, MapPin, Heart, Award, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const row1Items = [
   'C++', 'C#', 'Java', 'HTML', 'CSS', 'JavaScript', 
@@ -11,7 +12,14 @@ const row2Items = [
   'Adobe XD', 'Adobe Premiere', 'After Effects', 'SketchUp', 'Chinese language', 'QuickBooks'
 ];
 
+const certificates = [
+  { src: '/images/certificate-foundation.jpg', label: 'Foundation Year Certificate' },
+  { src: '/images/certificate-transcript.jpg', label: 'Academic Transcript' },
+];
+
 export default function About() {
+  const [showCertModal, setShowCertModal] = useState(false);
+  const [certIndex, setCertIndex] = useState(0);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -30,6 +38,7 @@ export default function About() {
   };
 
   return (
+    <>
     <section id="about" className="py-24 bg-white dark:bg-slate-950 relative overflow-hidden">
       {/* Background Accent */}
       <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-purple-400/5 dark:bg-purple-600/5 rounded-full blur-[120px] pointer-events-none -z-10" />
@@ -143,8 +152,15 @@ export default function About() {
                       Information Technology
                     </p>
                     <p className="text-xs text-slate-400 dark:text-slate-500 mt-0.5">
-                      Ongoing Academic Studies
+                      Foundation Year • 2023–2024
                     </p>
+                    <button
+                      onClick={() => { setCertIndex(0); setShowCertModal(true); }}
+                      className="mt-2.5 inline-flex items-center space-x-1.5 text-xs font-semibold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors group"
+                    >
+                      <Award className="h-3.5 w-3.5" />
+                      <span className="group-hover:underline">View Certificate</span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -216,5 +232,94 @@ export default function About() {
         </motion.div>
       </div>
     </section>
+
+    {/* Certificate Modal */}
+    <AnimatePresence>
+      {showCertModal && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.25 }}
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          onClick={() => setShowCertModal(false)}
+        >
+          <motion.div
+            initial={{ scale: 0.85, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.85, opacity: 0 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+            className="relative max-w-3xl w-full max-h-[90vh] flex flex-col items-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setShowCertModal(false)}
+              className="absolute -top-2 -right-2 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors backdrop-blur-md border border-white/10"
+            >
+              <X className="h-5 w-5" />
+            </button>
+
+            {/* Certificate label */}
+            <div className="mb-4 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
+              <span className="text-sm font-semibold text-white">
+                {certificates[certIndex].label}
+              </span>
+            </div>
+
+            {/* Certificate Image */}
+            <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-white">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={certIndex}
+                  src={certificates[certIndex].src}
+                  alt={certificates[certIndex].label}
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -30 }}
+                  transition={{ duration: 0.3 }}
+                  className="w-full h-auto max-h-[75vh] object-contain"
+                />
+              </AnimatePresence>
+            </div>
+
+            {/* Navigation */}
+            <div className="flex items-center space-x-6 mt-4">
+              <button
+                onClick={() => setCertIndex((prev) => (prev - 1 + certificates.length) % certificates.length)}
+                className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors backdrop-blur-md border border-white/10 disabled:opacity-30"
+                disabled={certificates.length <= 1}
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+
+              {/* Dots */}
+              <div className="flex items-center space-x-2">
+                {certificates.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCertIndex(idx)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      idx === certIndex
+                        ? 'bg-white w-6'
+                        : 'bg-white/40 hover:bg-white/60'
+                    }`}
+                  />
+                ))}
+              </div>
+
+              <button
+                onClick={() => setCertIndex((prev) => (prev + 1) % certificates.length)}
+                className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors backdrop-blur-md border border-white/10 disabled:opacity-30"
+                disabled={certificates.length <= 1}
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+    </>
   );
 }
